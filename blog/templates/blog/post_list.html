@@ -1,5 +1,9 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+    <form method="GET" action="{% url 'search_results' %}" class="search-form">
+        <input type="text" name="q" placeholder="Search blog...">
+        <button type="submit">Search</button>
+    </form>
     {% for post in posts %}
         <article class="post">
             <time class="date">

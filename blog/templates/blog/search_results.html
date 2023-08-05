@@ -1,0 +1,20 @@
+<!-- search_results.html -->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="search-results">
+        <h2 class="search-results-title">Search Results for "{{ query }}"</h2>
+        {% if results %}
+            <ol class="search-results-list">
+                {% for post in results %}
+                    <li class="search-results-item">
+                        <span class="search-results-number">{{ forloop.counter }}</span>
+                        <a href="{% url 'post_detail' post.pk %}" class="search-results-link">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ol>
+        {% else %}
+            <p class="search-no-results">No results found.</p>
+        {% endif %}
+    </div>
+{% endblock %}

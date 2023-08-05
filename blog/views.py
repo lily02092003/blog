@@ -37,3 +37,8 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+def search_results(request):
+    query = request.GET.get('q')
+    results = Post.objects.filter(title__icontains=query)
+    context = {'results': results, 'query': query}
+    return render(request, 'blog/search_results.html', context)

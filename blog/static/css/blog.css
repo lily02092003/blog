@@ -1,70 +1,186 @@
-.page-header {
+/* Body Background */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
     background-color: #C25100;
-    margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
-}
-
-.page-header h1,
-.page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
     color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Lobster', cursive;
-}
-
-.date {
-    color: #828282;
-}
-
-.save {
-    float: right;
-}
-
-.post-form textarea,
-.post-form input {
-    width: 100%;
-}
-
+/* Top Menu Links */
 .top-menu,
 .top-menu:hover,
 .top-menu:visited {
     color: #ffffff;
+    font-size: 1.5rem;
     float: right;
-    font-size: 26pt;
     margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
+.page-header h1 a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Blog Posts */
 .post {
     margin-bottom: 70px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Post Headings and Links */
 .post h2 a,
 .post h2 a:visited {
-    color: #000000;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 
+.post h2 a:hover {
+    color: #C25100;
+}
+
+/* Post Date and Actions */
 .post > .date,
 .post > .actions {
     float: right;
+    font-size: 0.9rem;
+    color: #888;
 }
 
+/* Secondary Buttons */
 .btn-secondary,
 .btn-secondary:visited {
-    color: #C25100;
-    background: none;
-    border-color: #C25100;
+    color: #ffffff;
+    background: #C25100;
+    border: 2px solid #C25100;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .btn-secondary:hover {
-    color: #FFFFFF;
-    background-color: #C25100;
+    background-color: #E76A24;
 }
+
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.search-form button {
+    background-color: #C25100;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-form button:hover {
+    background-color: #E76A24;
+}
+
+
+/* blog.css */
+.search-results {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-results-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-results-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.search-results-item {
+    margin-bottom: 10px;
+}
+
+.search-results-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.search-results-link:hover {
+    color: #C25100;
+}
+
+.search-no-results {
+    font-style: italic;
+    color: #888;
+}
+.search-results-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.search-results-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-results-number {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #C25100;
+}
+
+
+/* blog.css */
+.post-form {
+    max-width: 100%;
+}
+
+.post-form h2 {
+    width: 100%;
+}
+
+.post-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+
